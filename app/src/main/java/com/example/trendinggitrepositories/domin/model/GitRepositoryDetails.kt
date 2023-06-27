@@ -7,6 +7,7 @@ data class GitRepositoryDetails(
     val score: Double = 0.0,
     val url: String = "",
     val description: String = "",
+    val language:String = ""
 )
 
 

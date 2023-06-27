@@ -19,4 +19,5 @@ ext{
     glide = "4.11.0"
     hilt_version = "2.44.2"
     lottieVersion = "4.2.0"
+    coilVersion = "2.4.0"
 }

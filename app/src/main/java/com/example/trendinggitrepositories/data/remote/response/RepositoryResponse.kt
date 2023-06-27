@@ -12,6 +12,7 @@ data class RemoteRepository(
     val score: Double? = null,
     val url: String? = null,
     val description: String? = null,
+    val language: String? = null
 )
 
 data class Owner(
@@ -25,7 +26,8 @@ fun List<RemoteRepository>.toGitRepositoryDetails(): List<GitRepositoryDetails> 
             avatar = it.owner?.avatarUrl ?: "",
             score = it.score ?: 0.0,
             url = it.url ?: "",
-            description = it.description ?: ""
+            description = it.description ?: "",
+            language = it.language ?: ""
         )
     }
 }

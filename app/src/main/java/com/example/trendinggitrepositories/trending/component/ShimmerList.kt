@@ -19,6 +19,7 @@ import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.trendinggitrepositories.ui.ShimmerAnimation
@@ -28,7 +29,7 @@ import com.example.trendinggitrepositories.ui.theme.TrendingGitRepositoriesTheme
 fun ShimmerList() {
     ShimmerAnimation { brush ->
         ShimmerAnimation { brush ->
-            LazyColumn {
+            LazyColumn(modifier = Modifier.testTag("shimmerList")) {
                 repeat(10) {
                     item {
                         Row(

@@ -15,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -39,7 +40,7 @@ fun RetryScreen(onRetryClick: () -> Unit) {
     ) {
         LottieAnimation(
             composition = composition,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().testTag("errorAnimation"),
             iterations = LottieConstants.IterateForever
         )
         Text(
@@ -56,7 +57,7 @@ fun RetryScreen(onRetryClick: () -> Unit) {
             border = BorderStroke(2.dp, Color.Green),
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxWidth().testTag("Retry button")
         ) {
             Text(
                 text = stringResource(id = R.string.retry),

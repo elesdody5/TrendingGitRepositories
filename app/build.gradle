@@ -77,7 +77,7 @@ dependencies {
     // hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-    
+
     // mockk library
     testImplementation "io.mockk:mockk:${mockkVersion}"
 
@@ -85,9 +85,8 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
 
 
-    //Glide
-    implementation "com.github.bumptech.glide:glide:$glide"
-    kapt "com.github.bumptech.glide:compiler:$glide"
+    //coil
+    implementation "io.coil-kt:coil-compose:$coilVersion"
 
     // lottie
     implementation "com.airbnb.android:lottie-compose:$lottieVersion"
