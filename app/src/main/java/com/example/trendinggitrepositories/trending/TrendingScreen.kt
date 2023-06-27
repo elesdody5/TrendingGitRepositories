@@ -1,5 +1,6 @@
 package com.example.trendinggitrepositories.trending
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,17 +27,20 @@ fun TrendingScreen(
             CenterAlignedTopAppBar(title = { Text(text = stringResource(id = R.string.trending)) })
         }
     ) { padding ->
-        if (trendingState.isLoading) {
-            ShimmerList()
-        } else if (trendingState.isError) {
-            RetryScreen {
-                event(TrendingAction.GetTrendingRepos)
+        Box(
+            modifier = Modifier.padding(padding),
+        ) {
+            if (trendingState.isLoading) {
+                ShimmerList()
+            } else if (trendingState.isError) {
+                RetryScreen {
+                    event(TrendingAction.GetTrendingRepos)
+                }
+            } else {
+                TrendingList(
+                    trendingRepos = trendingState.repos
+                )
             }
-        } else {
-            TrendingList(
-                modifier = Modifier.padding(padding),
-                trendingRepos = trendingState.repos
-            )
         }
     }
 }
