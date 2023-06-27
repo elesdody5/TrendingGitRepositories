@@ -17,7 +17,7 @@ class TrendingViewModel @Inject constructor(private val repositoryGateway: Repos
     ViewModel() {
 
     var trendingState by mutableStateOf(TrendingState())
-
+        private set
     init {
         reducer(TrendingAction.GetTrendingRepos)
     }

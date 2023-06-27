@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.example.trendinggitrepositories.R
+import com.example.trendinggitrepositories.trending.component.DarkModeMenu
 import com.example.trendinggitrepositories.trending.component.RetryScreen
 import com.example.trendinggitrepositories.trending.component.ShimmerList
 import com.example.trendinggitrepositories.trending.component.TrendingList
@@ -20,11 +21,16 @@ import com.example.trendinggitrepositories.trending.state.TrendingState
 @Composable
 fun TrendingScreen(
     trendingState: TrendingState,
-    event: (TrendingAction) -> Unit
+    isDarkMode: Boolean,
+    event: (TrendingAction) -> Unit,
+    toggleTheme: (Boolean) -> Unit
 ) {
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(title = { Text(text = stringResource(id = R.string.trending)) })
+            CenterAlignedTopAppBar(
+                title = { Text(text = stringResource(id = R.string.trending)) },
+                actions = { DarkModeMenu(isDarkMode = isDarkMode, toggleDarkMode = toggleTheme) }
+            )
         }
     ) { padding ->
         Box(
