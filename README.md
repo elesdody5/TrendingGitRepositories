@@ -11,6 +11,7 @@
 9. Retrofit
 10. Unit Test
 11. UI Test with compose.
+12. Clean architecture.
 
 # Screen Shots
 1. Trending List.
