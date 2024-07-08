@@ -1,5 +1,3 @@
-![image](https://github.com/elesdody5/TrendingGitRepositories/assets/37310898/ad0b108c-6f7c-4da7-9c45-d45900282148)![image](https://github.com/elesdody5/TrendingGitRepositories/assets/37310898/4f4090f8-c588-473a-afa3-bbe1983b07f1)# What is the project
-Trending git repositories.
 
 # Main Features
 1. Kotlin
